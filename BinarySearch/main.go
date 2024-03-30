@@ -7,12 +7,13 @@ func search(nums []int, target int) int {
 
 	for l <= r {
 		mid := (l + r) / 2
-		if nums[mid] < target {
-			l = mid + 1
-		} else if nums[mid] > target {
-			r = mid - 1
-		} else {
+
+		if nums[mid] == target {
 			return mid
+		} else if nums[mid] < target {
+			l = mid + 1
+		} else {
+			r = mid - 1
 		}
 	}
 
@@ -21,5 +22,5 @@ func search(nums []int, target int) int {
 
 func main() {
 	nums := []int{-1, 0, 3, 5, 9, 12}
-	fmt.Println(search(nums, 2))
+	fmt.Println(search(nums, 3))
 }

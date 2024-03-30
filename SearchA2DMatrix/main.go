@@ -7,7 +7,7 @@ func search(matrix [][]int, target int) bool {
 	l, r := 0, m*n-1
 
 	for l <= r {
-		mid := l + (r-l)/2
+		mid := (l + r) / 2
 		val := matrix[mid/n][mid%n]
 
 		if val == target {
@@ -28,5 +28,5 @@ func main() {
 	nums3 := []int{23, 30, 34, 60}
 	nums := [][]int{nums1, nums2, nums3}
 	fmt.Println(nums)
-	fmt.Println(search(nums, 3))
+	fmt.Println(search(nums, 33))
 }
