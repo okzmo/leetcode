@@ -28,5 +28,5 @@ func main() {
 	nums3 := []int{23, 30, 34, 60}
 	nums := [][]int{nums1, nums2, nums3}
 	fmt.Println(nums)
-	fmt.Println(search(nums, 33))
+	fmt.Println(search(nums, 11))
 }

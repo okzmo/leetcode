@@ -22,13 +22,13 @@ func searchBST(root *TreeNode, val int) *TreeNode {
 		return nil
 	}
 
-	if val == root.Val {
+	if root.Val == val {
 		return root
-	} else if val < root.Val {
-		return searchBST(root.Left, val)
+	} else if root.Val < val {
+		return searchBST(root.Right, val)
 	}
 
-	return searchBST(root.Right, val)
+	return searchBST(root.Left, val)
 }
 
 func main() {
@@ -40,5 +40,5 @@ func main() {
 		}},
 	}
 
-	fmt.Println(searchBST(tree, 3))
+	fmt.Println(searchBST(tree, 9))
 }
